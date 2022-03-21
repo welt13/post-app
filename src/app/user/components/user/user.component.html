@@ -1,0 +1,27 @@
+<div class="card mb-3" *ngIf="user">
+  <h3 class="p-3">{{user.username}}</h3>
+  <hr />
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6">
+        <p class="card-text">{{user.name}}</p>
+        <p class="card-text">{{user.email}}</p>
+        <p class="card-text">{{user.phone}}</p>
+        <p class="card-text">{{user.website}}</p>
+      </div>
+      <div class="col-6">
+        <p class="fs-5">Dirección</p>
+        <hr />
+        <p class="card-text">{{user.address.street}} {{user.address.suite}}</p>
+        <p class="card-text">{{user.address.city}} {{user.address.zipcode}}</p>
+      </div>
+    </div>
+    <hr />
+    <p class="fs-5">
+      Empresa
+    </p>
+    <p class="card-text">{{user.company.name}}</p>
+    <p class="card-text">{{user.company.catchPhrase}}</p>
+    <p class="card-text">{{user.company.bs}}</p>
+  </div>
+</div>

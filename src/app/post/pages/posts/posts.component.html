@@ -1,0 +1,24 @@
+<h2>Posts</h2>
+<hr />
+
+<div class="row mb-5">
+  <div class="col">
+    <p class="fs-4 mb-3">Filtro por usario:</p>
+    <div class="d-flex">
+      <app-user-select (onSelect)="getPosts($event)"></app-user-select>
+      <button type="button" class="btn btn-success" [routerLink]="['/posts/crear']">Crear post</button>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-warning" *ngIf="warning; else postsList">
+  No se encontró posts con el usuario seleccionado.
+</div>
+
+<ng-template #postsList>
+  <div class="row" *ngIf="posts.length > 0">
+    <div class="col-md-4 col-sm-6" *ngFor="let post of posts">
+      <app-post [post]="post"></app-post>
+    </div>
+  </div>
+</ng-template>

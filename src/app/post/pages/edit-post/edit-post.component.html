@@ -1,0 +1,26 @@
+<div class="container">
+  <a routerLink="posts" class="list-group-item list-group-item-action active">Volver al listado</a>
+  <h2 class="mt-5">Editar Post</h2>
+  <hr />
+  <div class="row">
+    <div class="col">
+      <h4 class="mt-3">Usuario</h4>
+      <p class="fs-5">{{user?.name}}</p>
+    </div>
+  </div>
+  <app-form-post (onSubmitForm)="editPost($event)" [post]="post"></app-form-post>
+  <div class="row mt-5">
+    <div class="col">
+      <div class="alert alert-danger" *ngIf="error">
+        Ha habido un error al editar el post
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col">
+      <div class="alert alert-success" *ngIf="success">
+        Post editado correctamente.
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<form class="d-flex">
+  <select class="form-select me-2" name="userFilter" [(ngModel)]="userId" (change)="onSelect.emit(userId)">
+    <option [value]="user.id" *ngFor="let user of users">{{user.name}}</option>
+  </select>
+  <button type="button" class="btn btn-primary me-2" (click)="cleanUser()">Limpiar</button>
+</form>

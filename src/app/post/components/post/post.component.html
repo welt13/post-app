@@ -1,0 +1,12 @@
+<div class="card bg-dark border-right mb-3" [routerLink]="['/posts', post.id]">
+  <h4 class="p-3 text-light text-center">{{post.title}}</h4>
+  <hr />
+  <div class="card-body bg-light">
+    <p class="card-text">
+      {{post.body}}
+    </p>
+  </div>
+  <button type="button" class="btn btn-primary" [routerLink]="['/posts/editar', post.id]">
+    <i class="bi bi-pencil-fill"></i>
+  </button>
+</div>

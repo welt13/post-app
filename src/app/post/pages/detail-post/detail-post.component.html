@@ -1,0 +1,17 @@
+<div class="container">
+  <a routerLink="posts" class="list-group-item list-group-item-action active">Volver al listado</a>
+  <h2 class="mt-5">Usuario</h2>
+  <hr />
+  <div class="row mt-5">
+    <div class="col">
+      <app-user [user]="user"></app-user>
+    </div>
+  </div>
+  <h2 class="mt-5">Comentarios</h2>
+  <hr />
+  <div class="row mt-5">
+    <div class="col-md-4 col-sm-6" *ngFor="let comment of comments">
+      <app-comment [comment]="comment"></app-comment>
+    </div>
+  </div>
+</div>
