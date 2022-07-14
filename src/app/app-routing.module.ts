@@ -7,25 +7,25 @@ import { PostsComponent } from './post/pages/posts/posts.component';
 
 const routes: Routes = [
   {
-    path: 'posts',
+    path: '',
     component: PostsComponent,
     pathMatch: 'full'
   },
   {
-    path: 'posts/crear',
+    path: 'crear',
     component: CreatePostComponent
   },
   {
-    path: 'posts/editar/:idPost',
+    path: 'editar/:idPost',
     component: EditPostComponent
   },
   {
-    path: 'posts/:idPost',
+    path: 'detail/:idPost',
     component: DetailPostComponent
   },
   {
     path: '**',
-    redirectTo: 'posts'
+    redirectTo: '/'
   }
 ];
 

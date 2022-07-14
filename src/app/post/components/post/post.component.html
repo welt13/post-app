@@ -1,4 +1,4 @@
-<div class="card bg-dark border-right mb-3" [routerLink]="['/posts', post.id]">
+<div class="card bg-dark border-right mb-3" [routerLink]="['/detail', post.id]">
   <h4 class="p-3 text-light text-center">{{post.title}}</h4>
   <hr />
   <div class="card-body bg-light">
@@ -6,7 +6,7 @@
       {{post.body}}
     </p>
   </div>
-  <button type="button" class="btn btn-primary" [routerLink]="['/posts/editar', post.id]">
+  <button type="button" class="btn btn-primary" [routerLink]="['/editar', post.id]">
     <i class="bi bi-pencil-fill"></i>
   </button>
 </div>
